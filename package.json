@@ -1,0 +1,24 @@
+{
+  "name": "post-form-handler",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": "8.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "emulator:deploy": "NODE_ENV='development' functions restart && functions deploy handler --trigger-http",
+    "gcloud:deploy": "gcloud functions deploy ls-post-form-email --entry-point handler --runtime nodejs8 --trigger-http --env-vars-file env.yaml",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sayan \"Riju\" Chakrabarti",
+  "license": "MIT",
+  "dependencies": {
+    "busboy": "^0.3.1",
+    "ejs": "^2.6.1",
+    "email-templates": "^5.0.5"
+  },
+  "devDependencies": {
+    "yamlenv": "^1.0.0"
+  }
+}
