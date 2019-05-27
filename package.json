@@ -1,5 +1,5 @@
 {
-  "name": "post-form-handler",
+  "name": "ls-submit-form-emails",
   "version": "1.0.0",
   "description": "",
   "engines": {
@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "emulator:deploy": "NODE_ENV='development' functions restart && functions deploy handler --trigger-http",
-    "gcloud:deploy": "gcloud functions deploy ls-post-form-email --entry-point handler --runtime nodejs8 --trigger-http --env-vars-file env.yaml",
+    "gcloud:deploy": "gcloud functions deploy $npm_package_name --entry-point handler --runtime nodejs8 --trigger-http --env-vars-file env.yaml",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sayan \"Riju\" Chakrabarti",
